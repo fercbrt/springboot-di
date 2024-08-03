@@ -7,14 +7,12 @@ import java.util.List;
 
 public class ProductService {
 
-    private ProductRepository repository = new ProductRepository();
+    private final ProductRepository repository = new ProductRepository();
 
     public List<Product> findAll() {
         return repository.findAll().stream().map(p -> {
-                    Product product = new Product();
-                    product.setId(p.getId());
-                    product.setName(p.getName());
-                    product.setPrice(p.getPrice()*2);
+                    Product product = p.clone();
+                    product.setPrice(product.getPrice() * 2);
                     return product;
                 }
         ).toList();
