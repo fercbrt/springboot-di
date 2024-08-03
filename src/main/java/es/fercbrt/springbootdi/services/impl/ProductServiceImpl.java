@@ -4,7 +4,6 @@ import es.fercbrt.springbootdi.models.Product;
 import es.fercbrt.springbootdi.repositories.ProductRepository;
 import es.fercbrt.springbootdi.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

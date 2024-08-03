@@ -2,7 +2,6 @@ package es.fercbrt.springbootdi.repositories.impl;
 
 import es.fercbrt.springbootdi.models.Product;
 import es.fercbrt.springbootdi.repositories.ProductRepository;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
