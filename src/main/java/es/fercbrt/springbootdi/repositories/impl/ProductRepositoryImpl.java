@@ -2,9 +2,11 @@ package es.fercbrt.springbootdi.repositories.impl;
 
 import es.fercbrt.springbootdi.models.Product;
 import es.fercbrt.springbootdi.repositories.ProductRepository;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class ProductRepositoryImpl implements ProductRepository {
     private final List<Product> data;
 

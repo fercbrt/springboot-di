@@ -4,12 +4,16 @@ import es.fercbrt.springbootdi.models.Product;
 import es.fercbrt.springbootdi.repositories.ProductRepository;
 import es.fercbrt.springbootdi.repositories.impl.ProductRepositoryImpl;
 import es.fercbrt.springbootdi.services.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class ProductServiceImpl implements ProductService {
 
-    private final ProductRepository productRepository = new ProductRepositoryImpl();
+    @Autowired
+    private ProductRepositoryImpl productRepository;
 
     public List<Product> findAll() {
         return productRepository.findAll().stream().map(p -> {
