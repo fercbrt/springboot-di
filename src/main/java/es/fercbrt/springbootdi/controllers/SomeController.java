@@ -2,6 +2,7 @@ package es.fercbrt.springbootdi.controllers;
 
 import es.fercbrt.springbootdi.models.Product;
 import es.fercbrt.springbootdi.services.ProductService;
+import es.fercbrt.springbootdi.services.impl.ProductServiceImpl;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +14,7 @@ import java.util.List;
 @RequestMapping("api/products")
 public class SomeController {
 
-    private final ProductService productService = new ProductService();
+    private final ProductService productService = new ProductServiceImpl();
 
     @GetMapping()
     public List<Product> list() {
