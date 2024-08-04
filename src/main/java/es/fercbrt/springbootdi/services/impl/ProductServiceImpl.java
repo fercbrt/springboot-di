@@ -10,8 +10,7 @@ import java.util.List;
 
 @Service
 public class ProductServiceImpl implements ProductService {
-
-
+    
     private ProductRepository productRepository;
 
     public ProductServiceImpl(@Qualifier("productList") ProductRepository productRepository) {
@@ -20,9 +19,11 @@ public class ProductServiceImpl implements ProductService {
 
     public List<Product> findAll() {
         return productRepository.findAll().stream().map(p -> {
-                    Product product = p.clone();
-                    product.setPrice(product.getPrice() * 2);
-                    return product;
+//                    Product product = p.clone();
+//                    product.setPrice(product.getPrice() * 2);
+//                    return product;
+                    p.setPrice(p.getPrice() * 2);
+                    return p;
                 }
         ).toList();
     }
