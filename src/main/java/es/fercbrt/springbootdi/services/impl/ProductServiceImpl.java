@@ -17,7 +17,7 @@ public class ProductServiceImpl implements ProductService {
     private Environment environment;
     private ProductRepository productRepository;
 
-    public ProductServiceImpl(@Qualifier("productList") ProductRepository productRepository) {
+    public ProductServiceImpl(@Qualifier("productJsonList") ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
 

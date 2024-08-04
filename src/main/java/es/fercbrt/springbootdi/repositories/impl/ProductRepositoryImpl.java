@@ -2,6 +2,7 @@ package es.fercbrt.springbootdi.repositories.impl;
 
 import es.fercbrt.springbootdi.models.Product;
 import es.fercbrt.springbootdi.repositories.ProductRepository;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 //import org.springframework.web.context.annotation.RequestScope;
 //import org.springframework.web.context.annotation.SessionScope;
@@ -10,6 +11,7 @@ import java.util.List;
 
 //@RequestScope
 //@SessionScope
+@Primary
 @Repository("productList")
 public class ProductRepositoryImpl implements ProductRepository {
     private final List<Product> data;
