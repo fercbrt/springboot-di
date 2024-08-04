@@ -4,7 +4,6 @@ import es.fercbrt.springbootdi.repositories.ProductRepository;
 import es.fercbrt.springbootdi.repositories.impl.ProductRepositoryJson;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
